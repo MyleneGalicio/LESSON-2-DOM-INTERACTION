@@ -1,44 +1,47 @@
-new Vue ({
-    el: '#assignment',
-    data: {
-        counter: 0,
-        timer: 5000,
-        value: 0,
-        
-    },
-    watch: {
-        counter(value) {
-            if(value > 37) {
-                const that =this;
-                setTimeout(function() {
-                    that.counter = 0;
-                }, 5000)
-            }
-        }
+const app = Vue.createApp({    
+    data() {
+        return {  
+            user: '',
+            user1: false,
+            user2: false,
+            enable: true,
+            color: '',
+            keyColor: '',
+
+           
+        };        
     },
     methods: {
-        
-        add() {
-            this.counter = this.counter +5;
-          
-        },
-        Add() {
-            this.counter = this.counter +1;
-        },
-        result() {
-            if (this.counter == 0) {
-                return this.counter;
-            }
-            else if (this.counter > 0 && this.counter < 37) {
-                return'Almost there! Add more!';
-            }
-            else if (this.counter > 37){
-                return "That's too much!";
-            }
-            return this.counter;
-            
-        },
-        
-    },
+        Input(event){
+            this.user = event.target.value;
 
+            if(this.user === 'user1'){
+                this.user1 = 'user1';
+            }else if(this.user ==='user2'){
+                this.user2 = 'user2';
+            }else{
+                this.user1 = ''
+                this.user2 = ''
+                
+            }
+        },
+        toggle(){
+            this.enable = !this.enable;
+        },
+
+        PickColor(event){
+            this.color = event.target.value;
+            if(this.color === 'pink'){
+                this.keyColor = this.color;
+            }else if(this.color === 'yellow'){
+                this.keyColor = this.color
+            }else if(this.color === 'gray'){
+                this.keyColor = this.color;
+            }else{
+                this.keyColor = '';
+            }
+        }
+    }
+    
 });
+app.mount('#assignment');
