@@ -4,7 +4,9 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-
+}
+body {
+    margin: 0;
 }
 header{
     width: 450px;
@@ -15,44 +17,41 @@ header{
     padding: 10px;
     margin-top: 20px;
     border-radius: 20px;
-}
+}    
 section{
-    width: 450px;
-    background-color:darkgrey;
-    color:white;
+    width: 400px;
+    background-color:dimgray;
+    color:whitesmoke;
     text-align: center;
     margin: auto;
-    padding: 30px;
-    margin-top: 30px;
+    padding: 20px;
+    margin-top: 20px;
     border-radius: 20px;
 }
-.events p{
-    font-size: 40px;
-}
-.line{
+button {
+    padding: 10px;
     background-color: yellow;
-    height: 2px;
-    width: 380px;
-    text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none ;   
+    margin-left: 5px;   
+
 }
-button{
-padding: 10px;
-background-color: yellow;
-margin-top: 20px;
-border-radius: 10px;
-border: none ;
+button {
+    padding: 10px;
+    background-color:yellow;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none ;
+    margin-left: 5px;      
+
 }
-input{
-margin-top: 20px;
-padding: 2px;
-border-radius: 7px;
-}
-p{
+p {
     width: 100%;
     margin-top: 10px;
-    background-color: yellow;
-    color: black;
+    background-color: darkgrey;
+    color: white;
     padding: 10px;
     border-radius: 10px;
+
 }

@@ -1,18 +1,44 @@
-new Vue({
-    el: '#container',
+new Vue ({
+    el: '#assignment',
     data: {
-            output1: '',
-            output2: ''
+        counter: 0,
+        timer: 5000,
+        value: 0,
+        
     },
-      methods: {
-        showAlert() {
-            alert('Alert Initialization Complete!')
-        },
-        setOutput1(event) {
-            this.output1 = event.target.value
-        },
-        setOutput2(event) {
-            this.output2 = event.target.value
+    watch: {
+        counter(value) {
+            if(value > 37) {
+                const that =this;
+                setTimeout(function() {
+                    that.counter = 0;
+                }, 5000)
+            }
         }
-    }
-})
+    },
+    methods: {
+        
+        add() {
+            this.counter = this.counter +5;
+          
+        },
+        Add() {
+            this.counter = this.counter +1;
+        },
+        result() {
+            if (this.counter == 0) {
+                return this.counter;
+            }
+            else if (this.counter > 0 && this.counter < 37) {
+                return'Almost there! Add more!';
+            }
+            else if (this.counter > 37){
+                return "That's too much!";
+            }
+            return this.counter;
+            
+        },
+        
+    },
+
+});

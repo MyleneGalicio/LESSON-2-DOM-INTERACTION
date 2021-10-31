@@ -4,27 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <title>Events</title>
-  </head>
-
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Reactivity in Action</title>
+</head>
 <body>
     <header>
-        <h1>Events</h1>
-    </header> 
-         <section id="container">
-             <h1>Event Practice</h1>
-             <div class="line"></div>
-             <button @click="showAlert">Show Alert</button>
-             <br />
-             <input type="text" v-on:keydown="setOutput1">
-             <p>Output: {{ output1 }}</p>
-             <br />
-             <input type="text" v-on:keyup.enter="setOutput2">
-             <p>Output: {{ output2 }}</p>
-         </section>
+        <h1>Reactivity in Action</h1>
+    </header>
 
-            <script src="assets/js/app.js"></script>
-   </body>
+    <section id="assignment">
+        <button v-on:click="add(5)">Add 5</button>
+        <button v-on:click="Add(1)">Add 1</button>
+        <p>Result: {{  result() }}</p>  
+    </section>
+    <script src="assets/js/app.js"></script>
+</body>
 </html>
